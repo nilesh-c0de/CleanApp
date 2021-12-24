@@ -53,9 +53,8 @@ public class MainActivity extends AppCompatActivity {
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerView.setAdapter(new MyAdapter(userArrayList, this));
 
-        Toast.makeText(getApplicationContext(), "modified", Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), "mod", Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), "mod", Toast.LENGTH_SHORT).show();
+        
+        String name;
 
     }
 }
