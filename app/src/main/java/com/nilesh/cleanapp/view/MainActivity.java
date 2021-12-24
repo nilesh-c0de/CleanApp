@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         binding.recyclerView.setAdapter(new MyAdapter(userArrayList, this));
 
         Toast.makeText(getApplicationContext(), "modified", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "modified3", Toast.LENGTH_SHORT).show();
 
     }
 }
