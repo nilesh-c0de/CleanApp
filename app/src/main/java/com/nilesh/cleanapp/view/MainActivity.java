@@ -3,6 +3,7 @@ package com.nilesh.cleanapp.view;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -51,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerView.setAdapter(new MyAdapter(userArrayList, this));
+
+        Toast.makeText(getApplicationContext(), "modified", Toast.LENGTH_SHORT).show();
 
     }
 }
