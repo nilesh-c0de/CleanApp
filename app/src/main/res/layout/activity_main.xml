@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.nilesh.cleanapp.model.User" />
+
+        <variable
+            name="viewmodel"
+            type="com.nilesh.cleanapp.viewmodel.MyViewModel" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".view.MainActivity">
+
+        <TextView
+            android:textColor="#f00"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{Integer.toString(user.userId)}"/>
+        <TextView
+            android:textColor="#0f0"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.userName}"/>
+
+        <TextView
+            android:textSize="30sp"
+            android:textColor="#f10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/counter"
+            android:text="@{viewmodel.text}"/>
+        <Button
+            android:id="@+id/button_increase"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="increase"
+            android:onClick="@{() -> viewmodel.updateText()}"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter value"
+            android:text="@={viewmodel.text}"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_user_layout"/>
+
+
+    </LinearLayout>
+</layout>
