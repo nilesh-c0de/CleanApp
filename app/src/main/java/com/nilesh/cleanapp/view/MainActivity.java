@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         binding.recyclerView.setAdapter(new MyAdapter(userArrayList, this));
 
         
-        String name = "nilesh";
+        String myName = "nilesh";
 
     }
 }
